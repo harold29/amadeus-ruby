@@ -31,6 +31,17 @@ module Amadeus
         Amadeus::Namespaces::Shopping::FlightOffersSearch.new(client)
       end
 
+      # The namespace for the FlightOffers API:
+      #
+      # @param [String] flight_offer_id The ID for the flight offer
+      # @return [Amadeus::Namespaces::Shopping::FlightOffer]
+      # @example
+      #   amadeus.shopping.flight_offer(flight_offer_id)
+      #
+      def pricing
+        Amadeus::Namespaces::Shopping::Pricing.new(client)
+      end
+
       # The namespace for the FlightDates API:
       #
       # @return [Amadeus::Namespaces::Shopping::FlightDates]
